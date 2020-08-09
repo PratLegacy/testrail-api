@@ -1,5 +1,5 @@
 const get  = require('request')
-var auth = Buffer.from('alcatrazwatchesnetflix@gmail.com' + ":" + "Natflix.525").toString('base64')   
+var auth = Buffer.from('alcatrazwatchesnetflix@gmail.com' + ":" + "Nottttflix.525").toString('base64')   
 
 const options = {
     method: "GET",
