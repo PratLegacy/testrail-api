@@ -1,9 +1,11 @@
 const get  = require('request')
-var auth = Buffer.from('alcatrazwatchesnetflix@gmail.com' + ":" + "Nottttflix.525").toString('base64')   
+var env = process.env.NODE_ENV || 'development';
+var config = require('../config')[env];
+var auth = Buffer.from(config.email + ":" + config.pswd).toString('base64')   
 
 const options = {
     method: "GET",
-    url: "https://pratlegacy.testrail.io/index.php?/api/v2/get_runs/1",
+    url: config.tr_url+"/index.php?/api/v2/get_runs/1",
     headers: {
         "Authorization": "Basic " + auth,
         "Content-Type": "application/json"
